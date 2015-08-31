@@ -10,13 +10,15 @@ depends=('qt5-base'
 	 'gst-plugins-base'
 	 'gst-plugins-good'
 	 'libnotify'
-	 'hicolor-icon-theme')
+	 'hicolor-icon-theme'
+	 'desktop-file-utils'
+	 'xdg-utils')
 # taglib not needed as it is already covered by gst-plugins-good dependency
 # hicolor theme for the icon structure
+# desktop-file-utils and xdg-utils needed for MIME and icon DB
 optdepends=('lame: mp3 converter, broadcasting'
             'gst-plugins-ugly: mp3 converter, broadcasting')
-makedepends=('subversion' 'cmake' 'desktop-file-utils' 'xdg-utils')
-# desktop-file-utils and xdg-utils needed for MIME and icon DB
+makedepends=('subversion' 'cmake')
 conflicts=('sayonara-player')
 install=sayonara-player-svn.install
 source=($pkgname::svn+http://sayonara-player.com/svn/sayonara/trunk)
